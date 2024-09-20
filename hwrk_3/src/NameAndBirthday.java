@@ -12,7 +12,11 @@ public class NameAndBirthday {
         System.out.print("Введите день рождения: ");
         int day = scanner.nextInt();
 
-        System.out.println("Меня зовут " + name + ".");
-        System.out.println("Я родился " + day + "." + month + "." + year);
+        // String.format
+        String introduction = String.format("Меня зовут %s.", name);
+        String birthday = String.format("Я родился %02d.%02d.%d", day, month, year);
+
+        System.out.println(introduction);
+        System.out.println(birthday);
     }
 }
